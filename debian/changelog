@@ -1,8 +1,32 @@
-eglibc (2.15-0ubuntu10.5pexip1) pexip; urgency=low
+eglibc (2.15-0ubuntu10.6pexip1) pexip; urgency=low
 
-  * Prepare Pexip packaging
+  * New upstream release.
 
- -- John-Mark Bell <jmb@pexip.com>  Tue, 24 Dec 2013 14:59:01 +0000
+ -- John-Mark Bell <jmb@pexip.com>  Mon, 04 Aug 2014 17:34:01 +0100
+
+eglibc (2.15-0ubuntu10.6) precise-security; urgency=medium
+
+  * SECURITY UPDATE: denial of service via buffer overflow in getaddrinfo
+    - debian/patches/any/CVE-2013-4458.patch: fix overflow in
+      sysdeps/posix/getaddrinfo.c.
+    - CVE-2013-4458
+  * SECURITY UPDATE: Directory traversal in locale environment handling
+    - debian/patches/any/CVE-2014-0475.diff: validate locale names in
+      locale/findlocale.c, locale/setlocale.c, added test to
+      localedata/tst-setlocale3.c, localedata/Makefile.
+    - CVE-2014-0475
+  * SECURITY UPDATE: use-after-free via posix_spawn_file_actions_addopen
+    failing to copy the path argument
+    - debian/patches/any/CVE-2014-4043.diff: properly copy path in
+      posix/spawn_faction_addopen.c, posix/spawn_faction_destroy.c,
+      posix/spawn_int.h, added test to posix/tst-spawn.c.
+    - CVE-2014-4043
+  * debian/patches/any/CVE-2013-4237-part2.diff: fix alignment issue
+    causing a readdir regression on sparc.
+  * debian/patches/any/CVE-2013-4332-part2.diff: added a couple of extra
+    commits to fix another overflow and an infinite loop.
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 28 Jul 2014 07:46:03 -0400
 
 eglibc (2.15-0ubuntu10.5) precise-security; urgency=low
 
