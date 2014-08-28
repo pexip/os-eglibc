@@ -1,3 +1,14 @@
+eglibc (2.15-0ubuntu10.7) precise; urgency=medium
+
+  * SECURITY UPDATE: heap overflow in __gconv_translit_find() (LP: #1362409)
+    - debian/patches/any/cvs-CVE-2014-5119.diff: Backport upstream commit to
+      completely remove support for loadable gconv transliteration modules.
+  * SECURITY REGRESSION: localplt regression introduced in 2.15-0ubuntu10.6
+    - debian/patches/any/submitted-CVE-2014-0475.diff: update with a backport
+      of upstream commit ca38dc17 to include memmem hidden alias declaration.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 27 Aug 2014 22:18:52 -0600
+
 eglibc (2.15-0ubuntu10.6) precise-security; urgency=medium
 
   * SECURITY UPDATE: denial of service via buffer overflow in getaddrinfo
