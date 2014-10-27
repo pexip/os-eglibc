@@ -41,6 +41,7 @@ localedata/locale-nb_NO.diff
 amd64/local-biarch.diff
 amd64/local-clone.diff
 amd64/local-linuxthreads-gscope.diff
+amd64/local-udp-syslog.diff
 amd64/submitted-tst-audit6-avx.diff
 amd64/submitted-rwlock-stack-imbalance.diff
 amd64/cvs-avx-fma4.diff

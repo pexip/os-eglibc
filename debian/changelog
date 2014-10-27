@@ -1,3 +1,9 @@
+eglibc (2.15-0ubuntu10.7pexip2) pexip; urgency=low
+
+  * debian/patches/amd64/local-udp-syslog.diff: use UDP/IP for syslog.
+
+ -- John-Mark Bell <jmb@pexip.com>  Thu, 23 Oct 2014 02:16:39 +0100
+
 eglibc (2.15-0ubuntu10.7pexip1) pexip; urgency=low
 
   * New upstream release.
