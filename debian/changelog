@@ -1,3 +1,25 @@
+eglibc (2.15-0ubuntu10.9pexip1) pexip; urgency=low
+
+  * New upstream release.
+
+ -- John-Mark Bell <jmb@pexip.com>  Mon, 05 Jan 2015 16:23:55 +0000
+
+eglibc (2.15-0ubuntu10.9) precise-security; urgency=medium
+
+  * SECURITY UPDATE: denial of service in IBM gconv modules
+    - debian/patches/any/CVE-2012-6656.diff: fix check in
+      iconvdata/ibm930.c.
+    - debian/patches/any/cvs-CVE-2014-6040.diff: fix checks in
+      iconvdata/ibm*.c.
+    - CVE-2012-6656
+    - CVE-2014-6040
+  * SECURITY UPDATE: arbitrary command execution via wordexp (LP: #1396471)
+    - debian/patches/any/CVE-2014-7817.diff: properly handle WRDE_NOCMD in
+      posix/wordexp.c, added tests to posix/wordexp-test.c.
+    - CVE-2014-7817
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 02 Dec 2014 11:21:12 -0500
+
 eglibc (2.15-0ubuntu10.7pexip2) pexip; urgency=low
 
   * debian/patches/amd64/local-udp-syslog.diff: use UDP/IP for syslog.
