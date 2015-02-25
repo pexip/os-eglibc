@@ -1,3 +1,22 @@
+eglibc (2.15-0ubuntu10.11) precise-security; urgency=medium
+
+  * SECURITY UPDATE: getaddrinfo writes to random file descriptors under
+    high load
+    - debian/patches/any/cvs-resolv-reuse-fd.diff: reload file descriptor
+      after calling reopen in resolv/res_send.c.
+    - CVE-2013-7423
+  * SECURITY UPDATE: denial of service via endless loop in getaddr_r
+    - debian/patches/any/cvs-getnetbyname.diff: iterate over alias names in
+      resolv/nss_dns/dns-network.c.
+    - CVE-2014-9402
+  * SECURITY UPDATE: buffer overflow in wscanf
+    - debian/patches/any/cvs-wscanf.diff: calculate correct size in
+      stdio-common/vfscanf.c, added test to stdio-common/tst-sscanf.c.
+    - CVE-2015-1472
+    - CVE-2015-1473
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 25 Feb 2015 09:12:22 -0500
+
 eglibc (2.15-0ubuntu10.10) precise-security; urgency=medium
 
   * SECURITY UPDATE: buffer overflow in __nss_hostname_digits_dots
