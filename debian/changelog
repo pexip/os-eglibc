@@ -1,3 +1,15 @@
+eglibc (2.15-0ubuntu10.12) precise; urgency=medium
+
+  * cvs-vfprintf-multibyte.diff: Fix "memory exhausted" bug in who, by no
+    longer parsing %s format arguments as multibyte strings (LP: #1109327)
+  * cvs-__SSE_MATH__-feraiseexcept.diff: Check for __SSE_MATH__ in x86_64
+    feraiseexcept to fix backported -m32 builds of GCC 4.8 (LP: #1165387)
+  * cvs-canonical-name.diff: Don't incorrectly do a PTR lookup when asked
+    to do a canonical lookup for a host using AI_CANONNAME (LP: #1057526)
+  * cvs-atomic-fastbins.diff: Fix race in free() of fastbin (LP: #1020210)
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Wed, 25 Mar 2015 13:28:41 -0600
+
 eglibc (2.15-0ubuntu10.11) precise-security; urgency=medium
 
   * SECURITY UPDATE: getaddrinfo writes to random file descriptors under
