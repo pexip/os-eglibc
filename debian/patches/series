@@ -205,3 +205,7 @@ any/CVE-2015-0235.diff
 any/cvs-resolv-reuse-fd.diff
 any/cvs-getnetbyname.diff
 any/cvs-wscanf.diff
+any/cvs-vfprintf-multibyte.diff
+any/cvs-atomic-fastbins.diff
+any/cvs-__SSE_MATH__-feraiseexcept.diff
+any/cvs-canonical-name.diff
