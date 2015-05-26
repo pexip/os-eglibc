@@ -1,3 +1,13 @@
+eglibc (2.15-0ubuntu10.12pexip2) pexip; urgency=low
+
+  * SECURITY UPDATE: buffer overflow in gethostbyname_r() and related
+    functions with misaligned buffer
+    - debian/patches/any/CVE-2015-1781.diff: Adjust buffer length
+      based on padding in resolv/nss_dns/dns-host.c.
+    - CVE-2015-1781
+
+ -- John-Mark Bell <jmb@pexip.com>  Tue, 26 May 2015 12:27:43 +0100
+
 eglibc (2.15-0ubuntu10.12pexip1) pexip; urgency=low
 
   * New upstream release.

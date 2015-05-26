@@ -209,3 +209,4 @@ any/cvs-vfprintf-multibyte.diff
 any/cvs-atomic-fastbins.diff
 any/cvs-__SSE_MATH__-feraiseexcept.diff
 any/cvs-canonical-name.diff
+any/CVE-2015-1781.diff
