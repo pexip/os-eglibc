@@ -210,5 +210,3 @@ any/cvs-atomic-fastbins.diff
 any/cvs-__SSE_MATH__-feraiseexcept.diff
 any/cvs-canonical-name.diff
 any/CVE-2015-1781.diff
-any/cvs-gethostbyname4-memory-leak.diff
-any/local-CVE-2015-7547.diff
