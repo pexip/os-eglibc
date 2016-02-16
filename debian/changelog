@@ -1,3 +1,17 @@
+eglibc (2.15-0ubuntu10.12pexip3) pexip; urgency=low
+
+  * debian/patches/any/cvs-gethostbyname4-memory-leak.diff:
+    - memory leak when processing certain DNS answers
+      Pull in fix from Debian:
+      https://anonscm.debian.org/cgit/pkg-glibc/glibc.git/commit/?id=61200ac9d6700a13ad561676ac20861ed8e82b2f
+  * SECURITY UPDATE: stack-based buffer overflow in getaddrinfo
+    - debian/patches/any/local-CVE-2015-7547.diff: 
+      Pull in fix from Debian:
+      https://anonscm.debian.org/cgit/pkg-glibc/glibc.git/commit/?id=3532bb9384a97e6038e98027f4c5883c4b7fe762
+    - CVE-2015-7547
+
+ -- John-Mark Bell <jmb@pexip.com>  Tue, 16 Feb 2016 15:00:23 +0000
+
 eglibc (2.15-0ubuntu10.12pexip2) pexip; urgency=low
 
   * SECURITY UPDATE: buffer overflow in gethostbyname_r() and related
